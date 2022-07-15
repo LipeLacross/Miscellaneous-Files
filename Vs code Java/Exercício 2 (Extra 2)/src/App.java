@@ -4,7 +4,7 @@ public class App {
     public static int multi(int n, int p) {
         int resultado = 0;
         
-        for(int i = 0; i < p; i++) {
+        for (int i = 0; i < p; i++) {
             resultado = resultado + n; 
         }
         
@@ -14,7 +14,7 @@ public class App {
     public static int potencia(int n, int p) {
         int resultado = 1;
 
-        for(int i = 0; i < p; i++) {
+        for (int i = 0; i < p; i++) {
             resultado = multi(resultado, n);
         }
         
