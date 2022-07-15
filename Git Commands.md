@@ -87,7 +87,12 @@ Usage: git reset [commit]
 This command undoes all the commits after the specified commit and preserves the changes locally.
 
 
-Usage: git reset -hard [commit]  This command discards all history and goes back to the specified commit.
+Usage: git reset --hard [commit]  This command discards all history and goes back to the specified commit.
+
+
+Usage: git reset .  
+
+This command unstages all the files, but it preserves the file contents.
 
 
 git status
@@ -139,6 +144,26 @@ This command creates a new branch.
 Usage: git branch -d [branch name]  
 
 This command deletes the feature branch.
+
+
+Usage: git branch -m <branch>
+
+Rename the current branch to ＜branch＞.
+
+
+Usage: git branch -a
+
+List all remote branches. 
+
+
+Usage: git push origin --delete <branch>
+
+To delete a remote branch.
+
+
+Usage: git remote prune
+
+To automatically delete all remote-tracking branches associated with deleted remote branches.
 
 
 git checkout
