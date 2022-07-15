@@ -1,8 +1,8 @@
 Git Commands
 git config
-Usage: git config -–global user.name “[name]”  
+Usage: git config --global user.name “[name]”  
 
-Usage: git config –-global user.email “[email address]”  
+Usage: git config --global user.email “[email address]”  
 
 This command sets the author name and email address respectively to be used with your commits.
 
@@ -27,6 +27,26 @@ This command adds a file to the staging area.
 Usage: git add *  
 
 This command adds one or more to the staging area.
+
+
+Usage: git add -A  
+
+To add all those files to our staging area.
+
+
+Usage: git add .  
+
+To add all files which stands for “current directory.
+
+
+Usage: git add -u 
+
+To add all deleted and modified files only to your staging area.
+
+
+Usage: git add *.txt 
+
+To add all files having a specific extension.
 
 
 git commit
@@ -67,7 +87,7 @@ Usage: git reset [commit]
 This command undoes all the commits after the specified commit and preserves the changes locally.
 
 
-Usage: git reset –hard [commit]  This command discards all history and goes back to the specified commit.
+Usage: git reset -hard [commit]  This command discards all history and goes back to the specified commit.
 
 
 git status
@@ -186,13 +206,11 @@ Usage: git stash pop
 
 This command restores the most recently stashed files.
 
-Git Stash Command - Git Commands - Edureka
 
 Usage: git stash list  
 
 This command lists all stashed changesets.
 
-Git Stash Command - Git Commands - Edureka
 
 Usage: git stash drop  
 

@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>//Stdlib.h é uma biblioteca de propósito geral padrão.\
+Ela possui funções envolvendo alocação de memória, controle de processos, conversões e outras.
 
 int main(){
     int a,b;
