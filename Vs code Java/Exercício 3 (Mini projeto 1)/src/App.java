@@ -21,7 +21,7 @@ public class App {
         
         
         if (escolha1.toLowerCase().equals("dormir")) {
-            System.out.println("Você dormiu, mas infelizmente o barulho está tão alto lá fora que o seu sono se esvai. Você preguiçosamente se levanta e sai de sua cabana para verificar as armas restantes... Infelizmente já pegaram todas as armas.\n Desesperadamente você se lembra dos treinos de Muai Thay(mt) e karatê(kt) que você teve com sua avó, mas fica em dúvida sobre qual escolher.");
+            System.out.println("Você dormiu, mas infelizmente o barulho está tão alto lá fora que o seu sono se esvai. Você preguiçosamente se levanta e sai de sua cabana para verificar as armas restantes...\nInfelizmente já pegaram todas as armas.\n Desesperadamente você se lembra dos treinos de Muai Thay(mt) e karatê(kt) que você teve com sua avó, mas fica em dúvida sobre qual escolher.");
             escolha2 = input.nextLine();
             System.out.println(situation1);
 
@@ -51,10 +51,10 @@ public class App {
                     
                     escolha4 = input.nextLine();
 
-                    if (escolha4.toLowerCase().equals("rei")) {
+                    if (escolha4.toLowerCase().equals("rei")) {aa
                         System.out.println(situation6);
                     } else if (escolha4.toLowerCase().equals("princesa")) {
-                        System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\nMas antes ela se aproxima de você para beija-lo, e sorrateiramente esfaqueia seu pescoço. \nGado ending");
+                        System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\nMas antes ela se aproxima de você para beija-lo, e sorrateiramente esfaqueia seu pescoço.\nLogo depois ela foge sozinha. \nGado ending");
                     } else {
                         System.out.println(error);
                     }
@@ -71,10 +71,10 @@ public class App {
             System.out.println(situation1);
 
             if (escolha2.toLowerCase().equals("arco")) {
-                System.out.println("Seu inimigo olha para você e corre loucamente para ataca-lo. Você só tem duas chances de acertar a sua flecha.\nVocê mira na cabeça do seu inimigo e atira, no entanto seu inimigo se defende com o machado.\n Você engole seco e prepara sua última flecha, sabe que se errar irá morrer...\nVocê atira e...\nAcerta!\nNa parede... logo recebe uma machadada e morre.\nBad ending.");
+                System.out.println("Seu inimigo olha para você e corre loucamente para ataca-lo. Você só tem duas chances de acertar a sua flecha.\nVocê mira na cabeça do seu inimigo e atira, no entanto seu inimigo se defende com o machado.\nVocê engole seco e prepara sua última flecha, sabe que se errar irá morrer...\nVocê atira e...\nAcerta!\nNa parede... logo recebe uma machadada e morre.\nBad ending.");
 
             } else if (escolha2.toLowerCase().equals("espada")) {
-                System.out.println("");
+                System.out.println("Seu inimigo olha para você e corre loucamente para ataca-lo. Sua mente é perspicaz, você corre na direção do seu oponente, ele o ataca pela direita, mas você se joga no chão e desliza em baixo.\nRapidamente você vê uma brecha na virilha do seu oponente, ela se encontra desprotegida, você dá uma cotovelada no saco do brutamontes e o faz ficar atordoado e de joelhos.\nVocê aproveita-se da situação para cortar a cabeça do obeso.");
                 System.out.println(situation2);
                 escolha3 = input.nextLine();
 
@@ -89,7 +89,7 @@ public class App {
                     if (escolha4.toLowerCase().equals("rei")) {
                         System.out.println(situation6);
                     } else if (escolha4.toLowerCase().equals("princesa")) {
-                        System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\n Good ending");
+                        System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\nMas antes ela se aproxima de você para beija-lo, logo depois vocês fogem juntos.\n Good ending");
                     } else {
                         System.out.println(error);
                     }
