@@ -44,7 +44,7 @@ public class App {
 
                 if (escolha3.toLowerCase().equals("fugir")) {
                     System.out.println(situation3);
-                } else if (escolha3.toLowerCase().equals("castelo")) {
+                } else if (escolha3.toLowerCase().equals("ir")) {
                     System.out.println(situation4);
                     System.out.println("Graças a sua alta agilidade você não sofre nenhum dano durante o trajeto. ");
                     System.out.println(situation5);
