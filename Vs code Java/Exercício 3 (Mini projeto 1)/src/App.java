@@ -9,7 +9,7 @@ public class App {
         
         situation1 = "Você segue adiante em direção ao castelo com o propósito de defender o rei... No meio do caminho há um brutamontes com um machado.";
         situation2 = "Derrotar seu inimigo o faz pensar na condição que se encontra a realiza, você pensa se realmente vale a pena(ir) arriscar a sua vida(fugir).";
-        situation3 = "Você sabe que buscar honra não a leva nada, você foge.\nLive coward ending.";
+        situation3 = "Você sabe que buscar honra não o leva a nada, você foge.\nLive coward ending.";
         situation4 = "Você pensa nos prêmios e na glória que poderia receber, e diante disso vai correndo até o castelo...\nDurante sua corrida um arqueiro inimigo atira em você.";
         situation5 = "Ao entrar no castelo, você vê alguns membros do castelo mortos. Através de sua análise rápida você percebe que o rei(rei) e a princesa(princesa) podem estar vivos, porém você deve escolher quem vai procurar.";
         situation6 = "Você vai até o trono e vê o seu rei apuros, ele está cercado de inimigos. Você tenta salva-lo, entretanto é derrotado pela quantidade absurda de soldados.\nSoldier ending.";
