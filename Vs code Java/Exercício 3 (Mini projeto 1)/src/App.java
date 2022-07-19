@@ -32,7 +32,7 @@ public class App {
 
                 if (escolha3.toLowerCase().equals("fugir")) {
                     System.out.println(situation3);
-                } else if (escolha3.toLowerCase().equals("castelo")) {
+                } else if (escolha3.toLowerCase().equals("ir")) {
                     System.out.println("Você pensa nos prêmios e na glória que poderia receber, e diante disso vai andando até o castelo...\nDurante sua corrida um arqueiro inimigo atira em você, já que você não tinha nenhuma armadura o resultado foi fatal...\nWarrior ending.");
                 } else {
                     System.out.println(error);
@@ -80,7 +80,7 @@ public class App {
 
                 if (escolha3.toLowerCase().equals("fugir")) {
                     System.out.println(situation3);
-                } else if (escolha3.toLowerCase().equals("castelo")) {
+                } else if (escolha3.toLowerCase().equals("ir")) {
                     System.out.println(situation4);
                     System.out.println("Graças a sua armadura você não sofre nenhum dano durante o trajeto.");
                     System.out.println(situation5);
