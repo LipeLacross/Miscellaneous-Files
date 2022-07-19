@@ -12,7 +12,7 @@ public class App {
         situation3 = "Você sabe que buscar honra não a leva nada, você foge.\nLive coward ending.";
         situation4 = "Você pensa nos prêmios e na glória que poderia receber, e diante disso vai correndo até o castelo...\nDurante sua corrida um arqueiro inimigo atira em você.";
         situation5 = "Ao entrar no castelo, você vê alguns membros do castelo mortos. Através de sua análise rápida você percebe que o rei(rei) e a princesa(princesa) podem estar vivos, porém você deve escolher quem vai procurar.";
-        situation6 = "Você vai até o trono e vê o seu rei apuros, ele está cercado de inimigos. Você tenta salva-lo, entretanto é derrotado pela quantidade absurda de soldados.\n Soldier ending.";
+        situation6 = "Você vai até o trono e vê o seu rei apuros, ele está cercado de inimigos. Você tenta salva-lo, entretanto é derrotado pela quantidade absurda de soldados.\nSoldier ending.";
 
         System.out.println("Você é um soldado do reino de Drazio, sua missão é defender o castelo.");
 
@@ -21,12 +21,12 @@ public class App {
         
         
         if (escolha1.toLowerCase().equals("dormir")) {
-            System.out.println("Você dormiu, mas infelizmente o barulho está tão alto lá fora que o seu sono se esvai. Você preguiçosamente se levanta e sai de sua cabana para verificar as armas restantes...\nInfelizmente já pegaram todas as armas.\n Desesperadamente você se lembra dos treinos de Muai Thay(mt) e karatê(kt) que você teve com sua avó, mas fica em dúvida sobre qual escolher.");
+            System.out.println("Você dormiu, mas infelizmente o barulho está tão alto lá fora que o seu sono se esvai. Você preguiçosamente se levanta e sai de sua cabana para verificar as armas restantes...\nInfelizmente já pegaram todas as armas.\nDesesperadamente você se lembra dos treinos de Muai Thay(mt) e karatê(kt) que você teve com sua avó, mas fica em dúvida sobre qual escolher.");
             escolha2 = input.nextLine();
             System.out.println(situation1);
 
             if (escolha2.toLowerCase().equals("mt")) {
-                System.out.println("Pela graça dos deuses ele está de costas pra você e sem capacete. Seu corpo é uma arma integrada, você aproveita-se da situação para chutar a cabeça do seu inimigo. Seu chute é tão forte quanto uma bigorna, e o faz desmaiar.\n Infelizmente você machucou seu pé e não pode correr.");
+                System.out.println("Pela graça dos deuses ele está de costas pra você e sem capacete. Seu corpo é uma arma integrada, você aproveita-se da situação para chutar a cabeça do seu inimigo. Seu chute é tão forte quanto uma bigorna, e o faz desmaiar.\nInfelizmente você machucou seu pé e não pode correr.");
                 System.out.println(situation2);
                 escolha3 = input.nextLine();
 
@@ -51,7 +51,7 @@ public class App {
                     
                     escolha4 = input.nextLine();
 
-                    if (escolha4.toLowerCase().equals("rei")) {aa
+                    if (escolha4.toLowerCase().equals("rei")) {
                         System.out.println(situation6);
                     } else if (escolha4.toLowerCase().equals("princesa")) {
                         System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\nMas antes ela se aproxima de você para beija-lo, e sorrateiramente esfaqueia seu pescoço.\nLogo depois ela foge sozinha. \nGado ending");
@@ -89,7 +89,7 @@ public class App {
                     if (escolha4.toLowerCase().equals("rei")) {
                         System.out.println(situation6);
                     } else if (escolha4.toLowerCase().equals("princesa")) {
-                        System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\nMas antes ela se aproxima de você para beija-lo, logo depois vocês fogem juntos.\n Good ending");
+                        System.out.println("Você vai até o quarto da princesa e não se depara com ninguém, ao entrar no quarto você começa a procura-la...\nEla estava escondida embaixo da cama, logo você explica a situação para ela e decide fugir com ela. \n Ela diz que há uma passagem secreta em determinado lugar do castelo, enquanto olha discretamente para sua vestimenta.\nVocê a leva até o local, ela abre passagem, assim permitindo a fuga.\nMas antes ela se aproxima de você para beija-lo, logo depois vocês fogem juntos.\nGood ending");
                     } else {
                         System.out.println(error);
                     }
@@ -111,9 +111,9 @@ public class App {
 }
 
 /* BASE
-        if (escolha.toLowerCase() == "") {
+        if (escolha.toLowerCase().equals("")) {
             System.out.println("");
-        } else if (escolha.toLowerCase() == "") {
+        } else if (escolha.toLowerCase().equals("")) {
             System.out.println("");
         } else {
             System.out.println(error);
