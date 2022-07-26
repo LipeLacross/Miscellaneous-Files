@@ -17,7 +17,7 @@ Comando if... then... else... mais genérico
 	    corpo 1
 	elif <variável> <condição>:
 	    corpo 2
-      	elif <variável> <condição>:
+    elif <variável> <condição>:
 	    corpo3
 	...
 	else:
