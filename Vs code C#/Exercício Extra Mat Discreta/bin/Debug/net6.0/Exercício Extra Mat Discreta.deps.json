@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Exercício Extra Mat Discreta/1.0.0": {
+        "runtime": {
+          "Exercício Extra Mat Discreta.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exercício Extra Mat Discreta/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

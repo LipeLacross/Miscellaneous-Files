@@ -1,0 +1,15 @@
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\bin\Debug\net6.0\Exercício Extra Mat Discreta.exe
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\bin\Debug\net6.0\Exercício Extra Mat Discreta.deps.json
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\bin\Debug\net6.0\Exercício Extra Mat Discreta.runtimeconfig.json
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\bin\Debug\net6.0\Exercício Extra Mat Discreta.dll
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\bin\Debug\net6.0\Exercício Extra Mat Discreta.pdb
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.csproj.AssemblyReference.cache
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.AssemblyInfoInputs.cache
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.AssemblyInfo.cs
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.csproj.CoreCompileInputs.cache
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.dll
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\refint\Exercício Extra Mat Discreta.dll
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.pdb
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\Exercício Extra Mat Discreta.genruntimeconfig.cache
+C:\Users\felip\OneDrive\Documentos\VScode\Vs-code-GithubTest\Vs code C#\Exercício Extra Mat Discreta\obj\Debug\net6.0\ref\Exercício Extra Mat Discreta.dll
