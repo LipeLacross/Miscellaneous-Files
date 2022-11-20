@@ -18,45 +18,48 @@ class Mat {
         }
         return resposta;
     }
-    public int permuta(int a, int b, int c, int d) {
-        //var mat = new Mat();
-        int n, k, l, m; 
-        n = (fatorial(a));
-        Console.WriteLine("============");
-        
-        if (b != null) {
-            k = (fatorial(b));
-            resposta = n / k;
-        }
-        if (c != null) {
-            l = (fatorial(c));
-            resposta = n / k*l;
-        }
-        if (d != null) {
-            m = (fatorial(d));
-            resposta = n / k*l*m;
-        }
+    public int permuta1(int a, int b) {
+        Console.WriteLine("n!");
+        int n = fatorial(a);
+        Console.WriteLine("k!");
+        int k = fatorial(b);
 
+        resposta = n/k;
         return resposta;
+    }
+    public int permuta2(int a, int b, int c) {
+        Console.WriteLine("n!");
+        int n = fatorial(a);
+        Console.WriteLine("k!");
+        int k = fatorial(b);
+        Console.WriteLine("j!");
+        int j = fatorial(c);
 
-        /*int n, k;
-        int fator1 = a;
-        n = 1;
-        while (fator1 != 1) {
-            n = n * fator1;
-            fator1 -= 1;
-            Console.WriteLine(n + " * " + fator1);
-        }
-        int fator2 = b;
-        k = 1;
-        while (fator2 != 1) {
-            k = k * fator2;
-            fator2 -= 1;
-            Console.WriteLine(k + " * " + fator2);
-        }*/
+        resposta = n/k * j;
+        return resposta;
+    }
+    public int permuta3(int a, int b, int c, int d) {
+        Console.WriteLine("n!");
+        int n = fatorial(a);
+        Console.WriteLine("k!");
+        int k = fatorial(b);
+        Console.WriteLine("j!");
+        int j = fatorial(c);
+        Console.WriteLine("m!");
+        int m = fatorial(d);
+        
+        resposta = n/k * j * m;
+        return resposta;
     }
     public int combination(int a , int b) {
+        Console.WriteLine("n!");
+        int n = fatorial(a);
+        Console.WriteLine("p!");
+        int p = fatorial(b);
+        Console.WriteLine("(n - p)!");
+        int NP = fatorial(a - b);
         
+        resposta = n/p * NP;
         return resposta;
     }
     public int polibinomial(int a) {

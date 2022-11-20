@@ -12,7 +12,7 @@ using System;
 
 namespace HelloWorld {
 	class Program {
-		public static void Main(string[] args) {
+		public static  void Main(string[] args) {
 			string escolha1 = "", escolha2, escolha3, valor1, valor2, valor3, valor4, valor5, enter;
 			int convertido1, convertido2, convertido3, convertido4;
 
@@ -40,67 +40,60 @@ namespace HelloWorld {
 					convertido1 = Convert.ToInt32(valor1);
 					Console.WriteLine($"O fatorial de {valor1} é {(mat.fatorial(convertido1))}.");
 				} else if (Convert.ToInt64(escolha1) == 3) { //Permutação
-					Console.WriteLine("A ordem dos elementos importa.\nTem repetição de elementos? (1)-Sim, (2)-Não:");
+					Console.WriteLine("A ordem dos elementos importa.\nTem repetição de elementos? (1)-Não, (2)-Sim:");
 					escolha2 = Console.ReadLine();
 					
-					if (Convert.ToInt64(escolha2) == 2) {
+					if (Convert.ToInt64(escolha2) == 1) {
 						Console.WriteLine("Escolha um número inteiro que represente a quantidade total de elementos:");
 						valor1 = Console.ReadLine();
 						Console.WriteLine("n! = n * (n – 1)*(n – 2)*(n – 3) ... * 1");
 						convertido1 = Convert.ToInt32(valor1);
 						Console.WriteLine($"A permutação de {valor1} é {(mat.fatorial(convertido1))}.");
-					} else if (Convert.ToInt64(escolha2) == 1) {
+					} else if (Convert.ToInt64(escolha2) == 2) {
 						Console.WriteLine("Escolha um número inteiro que represente a quantidade total de elementos:");
 						valor1 = Console.ReadLine();
 						Console.WriteLine("Quantos elementos tem repetições(máximo 3)");
 						escolha3 = Console.ReadLine();
-						
+
 						if (Convert.ToInt64(escolha3) == 1) {
-						Console.WriteLine("Digite a quantidade repetições de um elemento:");
-						valor2 = Console.ReadLine();
-						convertido1 = Convert.ToInt32(valor1);
-						convertido2 = Convert.ToInt32(valor2);
-						
+							Console.WriteLine("n!/k!");
+							Console.WriteLine("Digite a quantidade de repetições do elemento k:");
+							valor2 = Console.ReadLine();
+							convertido1 = Convert.ToInt32(valor1);
+							convertido2 = Convert.ToInt32(valor2);
+							Console.WriteLine($"O resultado é {(mat.permuta1(convertido1, convertido2))}.");
 						} else if (Convert.ToInt64(escolha3) == 2) {
-						Console.WriteLine("Digite a quantidade repetições de um elemento:");
-						valor2 = Console.ReadLine();
-						Console.WriteLine("Digite a quantidade repetições de um outro elemento:");
-						valor3 = Console.ReadLine();
-
-						convertido1 = Convert.ToInt32(valor1);
-						convertido2 = Convert.ToInt32(valor2);
-						convertido3 = Convert.ToInt32(valor3);
+							Console.WriteLine("n!/k!*j!");
+							Console.WriteLine("Digite a quantidade de repetições do elemento k:");
+							valor2 = Console.ReadLine();
+							Console.WriteLine("Digite a quantidade de repetições do elemento j:");
+							valor3 = Console.ReadLine();
+							convertido1 = Convert.ToInt32(valor1);
+							convertido2 = Convert.ToInt32(valor2);
+							convertido3 = Convert.ToInt32(valor3);
+							Console.WriteLine($"O resultado é {(mat.permuta2(convertido1, convertido2, convertido3))}.");
 						} else if (Convert.ToInt64(escolha3) == 3) {
-						Console.WriteLine("Digite a quantidade repetições de um elemento:");
-						valor2 = Console.ReadLine();
-						Console.WriteLine("Digite a quantidade repetições de um outro elemento:");
-						valor3 = Console.ReadLine();
-						Console.WriteLine("Digite a quantidade repetições de um último outro elemento:");
-						valor4 = Console.ReadLine();
-
-						convertido1 = Convert.ToInt32(valor1);
-						convertido2 = Convert.ToInt32(valor2);
-						convertido3 = Convert.ToInt32(valor3);
-						convertido4 = Convert.ToInt32(valor4);
+							Console.WriteLine("n!/k!*j!*m!");
+							Console.WriteLine("Digite a quantidade de repetições do elemento k:");
+							valor2 = Console.ReadLine();
+							Console.WriteLine("Digite a quantidade de repetições do elemento j:");
+							valor3 = Console.ReadLine();
+							Console.WriteLine("Digite a quantidade de repetições do elemento m:");
+							valor4 = Console.ReadLine();
+							convertido1 = Convert.ToInt32(valor1);
+							convertido2 = Convert.ToInt32(valor2);
+							convertido3 = Convert.ToInt32(valor3);
+							convertido4 = Convert.ToInt32(valor4);
+							Console.WriteLine($"O resultado é {(mat.permuta3(convertido1, convertido2, convertido3, convertido4))}.");
 						} else {
-							Console.WriteLine("ESCOLHA UM DOS NÚMEROS!!!");
-							break;
+							Console.WriteLine("ESCOLHA!");
 						}
-						convertido1 = Convert.ToInt32(valor1);
-						convertido2 = Convert.ToInt32(valor2);
-						convertido3 = Convert.ToInt32(valor3);
-						convertido4 = Convert.ToInt32(valor4);
-			
-						Console.WriteLine($"Se um conjunto, com n elementos, possui k repetições de um elemento, a fórmula assume a seguinte forma: P = n!/k!, logo a permutação de {valor1} elementos com {valor2} elementos(iguais) repetidos é igual a {(mat.permuta(convertido1, convertido2, convertido3))}.");
-					} else {
-						Console.WriteLine("ESCOLHA UM DOS NÚMEROS!!!");
-						break;
 					}
 				} else if (Convert.ToInt64(escolha1) == 4) { //Combinatória
-					Console.WriteLine("A ordem dos elementos não importa");
+					Console.WriteLine("A ordem dos elementos não importa: C = n!/p!(n-p)!");
 					Console.WriteLine("Escolha um número inteiro que represente a quantidade total de elementos:");
 						valor1 = Console.ReadLine();
-						Console.WriteLine("Digite a quantidade repetições de um elemento:");
+						Console.WriteLine("Digite a quantidade de elementos que serão selecionados:");
 						valor2 = Console.ReadLine();
 						convertido1 = Convert.ToInt32(valor1);
 						convertido2 = Convert.ToInt32(valor2);
