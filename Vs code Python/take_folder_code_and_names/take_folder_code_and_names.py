@@ -1,8 +1,8 @@
 import os
 
-def listar_pasta(caminho, nivel=0, arquivo=None):
+def listar_pasta(caminho, nivel=0, arquivo=None, arquivo_exclusao=None):
     # Lista de pastas a serem ignoradas
-    pastas_ignoradas = {'.venv', '.idea'}
+    pastas_ignoradas = {'.venv', '.idea', '.git'}
 
     # Itera sobre todos os itens na pasta
     for item in os.listdir(caminho):
@@ -13,6 +13,10 @@ def listar_pasta(caminho, nivel=0, arquivo=None):
         if os.path.isdir(caminho_completo) and item in pastas_ignoradas:
             continue
 
+        # Ignora o próprio arquivo de execução
+        if os.path.isfile(caminho_completo) and item == arquivo_exclusao:
+            continue
+
         # Adiciona o item ao arquivo com indentação baseada no nível
         if arquivo:
             arquivo.write("  " * nivel + "|-- " + item + "\n")
@@ -20,14 +24,14 @@ def listar_pasta(caminho, nivel=0, arquivo=None):
         # Se o item for um arquivo de código, inclui o conteúdo no arquivo
         if os.path.isfile(caminho_completo):
             # Verifica a extensão do arquivo para determinar se é um arquivo de código
-            if caminho_completo.endswith(('.py', '.js', '.java', '.c', '.cpp', '.h')):
+            if caminho_completo.endswith(('.py', '.js', '.java', '.c', '.cpp', '.h', '.ipynb')):
                 arquivo.write("  " * (nivel + 1) + "Conteúdo:\n")
                 with open(caminho_completo, 'r', encoding='utf-8', errors='ignore') as f:
                     for linha in f:
                         arquivo.write("  " * (nivel + 2) + linha)
         # Se o item for uma pasta, chama a função recursivamente
         elif os.path.isdir(caminho_completo):
-            listar_pasta(caminho_completo, nivel + 1, arquivo)
+            listar_pasta(caminho_completo, nivel + 1, arquivo, arquivo_exclusao)
 
 # Caminho da pasta que você quer listar
 caminho_da_pasta = './'
@@ -35,8 +39,11 @@ caminho_da_pasta = './'
 # Caminho do arquivo .txt onde a listagem será salva
 caminho_arquivo = 'listagem_pasta.txt'
 
+# Nome do próprio arquivo de execução
+nome_arquivo_exclusao = os.path.basename(__file__)
+
 # Abre o arquivo para escrita
 with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
-    listar_pasta(caminho_da_pasta, arquivo=arquivo)
+    listar_pasta(caminho_da_pasta, arquivo=arquivo, arquivo_exclusao=nome_arquivo_exclusao)
 
 print(f"A listagem foi salva em {caminho_arquivo}")
