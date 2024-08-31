@@ -1,49 +1,48 @@
 import os
 
-def listar_pasta(caminho, nivel=0, arquivo=None, arquivo_exclusao=None):
-    # Lista de pastas a serem ignoradas
-    pastas_ignoradas = {'.venv', '.idea', '.git'}
+def list_directory(path, level=0, output_file=None, exclude_file=None, list_content=False):
+    ignored_folders = {
+        '.venv', '.idea', '.git', 'node_modules', '__pycache__', 'dist', 
+        'build', '.DS_Store', '.vscode', 'target', 'out', '.pytest_cache', 
+        '.mypy_cache', 'logs', 'coverage'
+    }
 
-    # Itera sobre todos os itens na pasta
-    for item in os.listdir(caminho):
-        # Cria o caminho completo do item
-        caminho_completo = os.path.join(caminho, item)
+    for item in os.listdir(path):
+        full_path = os.path.join(path, item)
 
-        # Ignora pastas especificadas
-        if os.path.isdir(caminho_completo) and item in pastas_ignoradas:
+        if item.startswith('.'):
             continue
 
-        # Ignora o próprio arquivo de execução
-        if os.path.isfile(caminho_completo) and item == arquivo_exclusao:
+        if os.path.isdir(full_path) and item in ignored_folders:
             continue
 
-        # Adiciona o item ao arquivo com indentação baseada no nível
-        if arquivo:
-            arquivo.write("  " * nivel + "|-- " + item + "\n")
+        if os.path.isfile(full_path):
+            if item == exclude_file:
+                continue
 
-        # Se o item for um arquivo de código, inclui o conteúdo no arquivo
-        if os.path.isfile(caminho_completo):
-            # Verifica a extensão do arquivo para determinar se é um arquivo de código
-            if caminho_completo.endswith(('.py', '.js', '.java', '.c', '.cpp', '.h', '.ipynb')):
-                arquivo.write("  " * (nivel + 1) + "Conteúdo:\n")
-                with open(caminho_completo, 'r', encoding='utf-8', errors='ignore') as f:
-                    for linha in f:
-                        arquivo.write("  " * (nivel + 2) + linha)
-        # Se o item for uma pasta, chama a função recursivamente
-        elif os.path.isdir(caminho_completo):
-            listar_pasta(caminho_completo, nivel + 1, arquivo, arquivo_exclusao)
+            if output_file:
+                output_file.write("  " * level + "|-- " + item + "\n")
 
-# Caminho da pasta que você quer listar
-caminho_da_pasta = './'
+            if list_content and item.endswith(('.py', '.js', '.java', '.c', '.cpp', '.h', '.ipynb', '.html', '.css', '.ts', '.tsx', '.scss', '.sass')):
+                output_file.write("  " * (level + 1) + "Content:\n")
+                with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    for line in f:
+                        output_file.write("  " * (level + 2) + line)
+        elif os.path.isdir(full_path):
+            if output_file:
+                output_file.write("  " * level + "|-- " + item + "/\n")
+            list_directory(full_path, level + 1, output_file, exclude_file, list_content)
 
-# Caminho do arquivo .txt onde a listagem será salva
-caminho_arquivo = 'listagem_pasta.txt'
+def generate_listing(directory_path, output_file_path, exclude_file_name):
+    with open(output_file_path, 'w', encoding='utf-8') as output_file:
+        list_directory(directory_path, output_file=output_file, exclude_file=exclude_file_name)
+        output_file.write("\n\nFile contents:\n\n")
+        list_directory(directory_path, output_file=output_file, exclude_file=exclude_file_name, list_content=True)
 
-# Nome do próprio arquivo de execução
-nome_arquivo_exclusao = os.path.basename(__file__)
+directory_path = './'
+output_file_path = 'directory_listing.txt'
+exclude_file_name = os.path.basename(output_file_path)
 
-# Abre o arquivo para escrita
-with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
-    listar_pasta(caminho_da_pasta, arquivo=arquivo, arquivo_exclusao=nome_arquivo_exclusao)
+generate_listing(directory_path, output_file_path, exclude_file_name)
 
-print(f"A listagem foi salva em {caminho_arquivo}")
+print(f"The listing has been saved in {output_file_path}")
