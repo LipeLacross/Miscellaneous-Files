@@ -1,3 +1,5 @@
+## 🌐 [English Version of README](README_EN.md)
+
 # Miscellaneous-Files
 
 Este projeto contém diversas atividades desenvolvidas utilizando as linguagens Java, Javascript e Python. O objetivo é reunir exemplos práticos de cada linguagem, servindo como um repositório de aprendizado e experimentação.
