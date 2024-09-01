@@ -4,8 +4,9 @@ def list_directory(path, level=0, output_file=None, exclude_file=None, list_cont
     ignored_folders = {
         '.venv', '.idea', '.git', 'node_modules', '__pycache__', 'dist', 
         'build', '.DS_Store', '.vscode', 'target', 'out', '.pytest_cache', 
-        '.mypy_cache', 'logs', 'coverage'
+        '.mypy_cache', 'logs', 'coverage',
     }
+    current_script_name = os.path.basename(__file__)
 
     for item in os.listdir(path):
         full_path = os.path.join(path, item)
@@ -17,7 +18,7 @@ def list_directory(path, level=0, output_file=None, exclude_file=None, list_cont
             continue
 
         if os.path.isfile(full_path):
-            if item == exclude_file:
+            if item == exclude_file or item == current_script_name:
                 continue
 
             if output_file:
